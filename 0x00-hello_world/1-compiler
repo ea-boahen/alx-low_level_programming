@@ -1,0 +1,3 @@
+#!/bin/bash
+gcc -S 1-main.c -o 1-main.o
+
