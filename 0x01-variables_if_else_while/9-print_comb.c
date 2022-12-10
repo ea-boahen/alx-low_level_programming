@@ -10,7 +10,6 @@ int main(void)
 {
 
 	int i = 0;
-	char ch = 'a';
 
 	while (i < 10)
 	{
