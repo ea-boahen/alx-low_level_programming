@@ -3,7 +3,7 @@
 
 /**
  * jack_bauer - prints sign
- * @n: takes input to function
+ *
  * Return: Always 0 (Success)
  */
 void jack_bauer(void)
