@@ -17,6 +17,6 @@ int main(void)
 		if (i % 5 == 0)
 			m += i;
 	}
-	printf("%d", m);
+	printf("%d\n", m);
 	return (0);
 }
