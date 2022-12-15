@@ -12,7 +12,7 @@ int main(void)
 
 	for (i = 0; i < 1024; i++)
 	{
-		if (i % 2 == 0)
+		if (i % 3 == 0)
 			m += i;
 		if (i % 5 == 0)
 			m += i;
