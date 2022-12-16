@@ -9,6 +9,7 @@
 void print_triangle(int s)
 {
 	int i;
+
 	if (s <= 0)
 		putchar('\n');
 	else
