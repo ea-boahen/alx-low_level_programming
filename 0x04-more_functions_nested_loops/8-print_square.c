@@ -10,6 +10,7 @@
 void print_square(int s)
 {
 	int x;
+
 	if (s <= 0)
 	{
 		_putchar('\n');
