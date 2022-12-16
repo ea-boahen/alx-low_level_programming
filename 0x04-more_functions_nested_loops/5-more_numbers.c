@@ -2,11 +2,11 @@
 #include <ctype.h>
 
 /**
- * print_numbers- alt function
- * Description: prints digits from 0 to 9
+ * more_numbers- alt function
+ * Description: prints digits from 0 to 14 ten times
  * Return: Always 0 (Success)
  */
-void print_numbers(void)
+void more_numbers(void)
 {
 	int x;
 
@@ -16,7 +16,12 @@ void print_numbers(void)
 
 		while (i < 15)
 		{
-			_putchar('0' + i);
+			if (i > 9)
+			{
+				_putchar((i / 10) + '0');
+			}
+
+			_putchar((i % 10) + '0');
 			i++;
 		}
 		_putchar('\n');
