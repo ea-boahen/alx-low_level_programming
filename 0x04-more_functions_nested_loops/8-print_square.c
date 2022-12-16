@@ -10,16 +10,22 @@
 void print_square(int s)
 {
 	int x;
-
-	for (x = 0; x < s; x++)
+	if (s <= 0)
 	{
-		int i = 0;
-
-		while (i < s)
-		{
-			_putchar('#');
-			i++;
-		}
 		_putchar('\n');
+	}
+	else
+	{
+		for (x = 0; x < s; x++)
+		{
+			int i = 0;
+
+			while (i < s)
+			{
+				_putchar('#');
+				i++;
+			}
+			_putchar('\n');
+		}
 	}
 }
