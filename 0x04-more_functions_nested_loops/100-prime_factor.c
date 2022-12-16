@@ -9,14 +9,15 @@
 int main(void)
 {
 	long x;
-	double sq = sqrt(612852475143);
+	long n = 1231952;
+	double sq = sqrt(n);
 	long isPrime;
 
 	for (x = 2; x <= sq; x++)
 	{
-		if (612852475143 % x == 0)
+		if (n % x == 0)
 		{
-			isPrime = 612852475143 / x;
+			isPrime = n / x;
 		}
 	}
 	printf("%ld\n", isPrime);
