@@ -9,7 +9,7 @@
 int main(void)
 {
 	long x;
-	long n = 1231952;
+	long n = 612852475143;
 	double sq = sqrt(n);
 	long isPrime;
 
