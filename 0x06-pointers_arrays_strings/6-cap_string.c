@@ -17,7 +17,7 @@ char *cap_string(char *p)
 	{
 		for (j = 0; j < 13; j++)
 		{
-			if ((i==0 || p[i - 1] == sow[j]) && (p[i] >= 97 && p[i] <= 122))
+			if ((i == 0 || p[i - 1] == sow[j]) && (p[i] >= 97 && p[i] <= 122))
 			{
 				p[i] -= 32;
 			}
