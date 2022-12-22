@@ -10,9 +10,12 @@
 char *string_toupper(char *p)
 {
 	int a = 0;
+	int b = strlen(p);
 
-	for (; a < strlen(p); a++)
+	for (; a < b; a++)
+	{
 		if (p[a] >= 97 && p[a] <= 122)
 			p[a] -= 32;
+	}
 	return (p);
 }
