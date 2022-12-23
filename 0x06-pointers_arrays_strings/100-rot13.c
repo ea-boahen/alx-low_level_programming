@@ -20,9 +20,9 @@ char *rot13(char *p)
 			if (p[i] == a[j])
 			{
 				p[i] = b[j];
-				break
+				break;
 			}
 		}
 	}
-	return (s);
+	return (p);
 }
