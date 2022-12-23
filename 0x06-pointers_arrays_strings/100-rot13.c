@@ -1,28 +1,28 @@
 #include "main.h"
-#include <string.h>
 
 /**
- * rot13 - encodes based on rot13
- * @p: input char to function
+ * rot13 - encodes a string using rot13
+ * @c: string to function
  *
- * Return: void.
+ * Return: the resulting string
  */
-char *rot13(char *p)
+char *rot13(char *c)
 {
 	int i, j;
+
 	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char b[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	for (i = 0; p[i] != '\0'; p++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		for (j = 0; a[j] != '\0'; j++)
 		{
-			if (p[i] == a[j])
+			if (s[i] == a[j])
 			{
-				p[i] = b[j];
+				s[i] = b[j];
 				break;
 			}
 		}
 	}
-	return (p);
+	return (s);
 }
