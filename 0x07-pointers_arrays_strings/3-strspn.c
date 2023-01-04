@@ -10,18 +10,20 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int b = strlen(accept);
-	int i, c = 0;
+	unsigned int c = 0;
+	char *d = accept;
 
-	for (; s[i] != ' '; i++)
+	while (*s++)
 	{
-		int j = 0;
-
-		for (; j < b; j++)
-		{
-			if (s[i] == accept[j])
+		while (*accept++)
+			if (*(s - 1) == *(accept - 1))
+			{
 				c++;
-		}
+				break;
+			}
+		if (!(*--accept))
+			break;
+		accept = d;
 	}
 	return (c);
 }
