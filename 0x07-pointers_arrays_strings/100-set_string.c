@@ -2,11 +2,9 @@
 #include <string.h>
 
 /**
- * _memset - fills the first n bytes of the memory area pointed to by
- *	s with the constant byte b
+ * set_string- sets string to to
  * @s: destination string
- * @b: constant byte
- * @n: number to fill to
+ * @to: number to fill to
  *
  * Return: void.
  */
