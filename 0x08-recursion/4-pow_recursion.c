@@ -4,7 +4,7 @@
 /**
  * _pow_recursion- find power
  * @x: digit
- * @y: digit 
+ * @y: digit
  * Return: void.
  */
 int _pow_recursion(int x, int y)
