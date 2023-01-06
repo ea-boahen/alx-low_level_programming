@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * divisors - number is prime?
- * @n: integer params
- * @m: integer params
+ * divs - number is prime?
+ * @a: integer params
+ * @b: integer params
  * Return: integer
  */
 int divs(int a, int b)
@@ -24,7 +24,7 @@ int divs(int a, int b)
 
 /**
  * is_prime_number - checks for prime
- * @n: integer 
+ * @n: integer
  *
  * Return: integer
  */
