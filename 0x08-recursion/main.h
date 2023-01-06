@@ -11,6 +11,6 @@ int _pow_recursion(int x, int y);
 int _sqrt_recursion(int n);
 int _sqrt(int a, int b);
 int is_prime_number(int n);
-int divs(ing a, int b);
+int divs(int a, int b);
 
 #endif /* MAIN_H */
