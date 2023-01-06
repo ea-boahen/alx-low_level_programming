@@ -2,9 +2,9 @@
 #include <string.h>
 
 /**
- * factorial- prints a factorial of a number
- * @n: digit to be printed recursively
- *
+ * _pow_recursion- find power
+ * @x: digit
+ * @y: digit 
  * Return: void.
  */
 int _pow_recursion(int x, int y)
