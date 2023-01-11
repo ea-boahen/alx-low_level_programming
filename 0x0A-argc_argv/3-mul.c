@@ -7,7 +7,8 @@
  * @argc: size
  * @argv: string
  *
- * Return: character array.
+ * Return: if error 0
+ *			eles 1.
  */
 int main(int argc, char *argv[])
 {
@@ -21,6 +22,9 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	else
+	{
 		printf("%d\n", sum);
+		return (0);
+	}
 	return (0);
 }
