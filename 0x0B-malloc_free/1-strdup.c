@@ -8,7 +8,7 @@
  *
  * Return: character array.
  */
-char *_strdup(char *str);
+char *_strdup(char *str)
 {
 	char *a;
 	unsigned int i, j;
