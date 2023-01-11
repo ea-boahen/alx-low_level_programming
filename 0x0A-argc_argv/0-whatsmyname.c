@@ -5,7 +5,7 @@
  * @argc: size
  * @argv: string
  *
- * Return: character array.
+ * Return: always 0.
  */
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
