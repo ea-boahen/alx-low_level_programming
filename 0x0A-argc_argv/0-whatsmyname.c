@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 /**
- * main- Write a function that creates an array of chars
- * @argc: size
- * @argv: string
+ * main - Prints the program name, followed by a new line.
+ * @argc: The number of arguments supplied to the program.
+ * @argv: An array of pointers to the arguments.
  *
- * Return: always 0.
+ * Return: Always o.
  */
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
