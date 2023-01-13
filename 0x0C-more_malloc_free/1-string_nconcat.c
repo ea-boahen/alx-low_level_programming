@@ -19,7 +19,7 @@ int _strlen(char *string)
  * string_nconcat- prints a string recursively
  * @s1: string to be printed recursively
  * @s2: second string
- * @n: size to be added 
+ * @n: size to be added
  *
  * Return: void.
  */
@@ -29,7 +29,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	int number = n, i = 0, j = 0;
 	char *s;
 
-	if ( s1 == NULL)
+	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
