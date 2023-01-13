@@ -2,10 +2,10 @@
 #include <stdlib.h>
 
 /**
- * _puts_recursion- prints a string recursively
- * @s: string to be printed recursively
+ * malloc_checked- prints a string recursively
+ * @b: string to be printed recursively
  *
- * Return: void.
+ * Return: pointer to allocated memory.
  */
 void *malloc_checked(unsigned int b)
 {
