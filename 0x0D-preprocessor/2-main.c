@@ -3,9 +3,9 @@
  * main - resets value of n to 98
  * Return: void.
  */
-int main()
+int main(void)
 {
 	 /*char *i = __FILE__;*/
-	 printf("%s\n", __FILE__);
-	 return (0);
+	printf("%s\n", __FILE__);
+	return (0);
 }
