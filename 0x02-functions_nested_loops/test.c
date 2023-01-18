@@ -1,24 +1,21 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <string.h>
 
 /**
-  * main - Prints the sum of all multiples of 3 or 5 up to 1024
-  *
-  * Return: Always (Success)
-  */
+ * main - Generates random valid passwords for the
+ *        program 101-crackme.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
-	int i, z = 0;
+	char s[180] = "come";
+	char *d = "ls";
+	size_t i = strlen(s);
+	size_t a = 1;
 
-	while (i < 1024)
-	{
-		if ((i % 3 == 0) || (i % 5 == 0))
-		{
-			z += i;
-		}
-
-		i++;
-	}
-
-	printf("%d\n", z);
-	return (0);
+	//s[i] = d[1];
+	printf("%ld\n", i);
 }

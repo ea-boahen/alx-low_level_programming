@@ -7,7 +7,10 @@
  */
 int main(void)
 {
-	puts("\"Programming is like building a multilingual puzzle");
+	char ath = 66;
+	//puts("\"Programming is like building a multilingual puzzle");
+	putchar(ath);
+	putchar('\n');
 	return (0);
 }
 
