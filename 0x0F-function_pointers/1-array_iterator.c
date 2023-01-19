@@ -1,22 +1,21 @@
 #include "function_pointers.h"
-#include <stdio.h>
-
 /**
- * array_iterator - checks if character is upper
- * @array: array to be iterated
- * @size: size of array
- * @action: function to work on each element of array
- *
- * Return: void (Success)
+ * array_iterator - execute function on each element
+ * of an array
+ * @array: given array
+ * @size: size of the array
+ * @action: pointer to function
+ * Return: void
  */
-
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	if (action != NULL || array != NULL)
-	{
-		int i, j = size;
+int i;
 
-		for (i = 0; i < j; i++)
-			action(array[i]);
-	}
+if (array == NULL || action == NULL)
+return;
+
+for (i = 0; i < (int) size; i++)
+{
+action(array[i]);
+}
 }
