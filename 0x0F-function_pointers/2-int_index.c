@@ -4,7 +4,7 @@
  * int_index - uses function passed to it
  * @array: array to be searched
  * @size: size of array
- * @comp: function that prints name
+ * @cmp: function that prints name
  *
  * Return: Integer (Success)
  */
