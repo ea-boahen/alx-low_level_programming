@@ -1,4 +1,4 @@
-#include "function_pointers.h"
+#include "3-calc.h"
 
 /**
  * op_add - adds integers
@@ -64,7 +64,7 @@ int op_mod(int a, int b)
 {
 	if (b == 0)
 	{
-		printf("Error\n")
+		printf("Error\n");
 			exit(100);
 	}
 	return (a % b);
