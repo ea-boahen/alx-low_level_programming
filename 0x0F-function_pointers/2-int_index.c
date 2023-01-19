@@ -9,17 +9,17 @@
  * Return: Integer (Success)
  */
 
-int int_index(int *array, int size, int (*comp)(int))
+int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i;
 
 	if (size <= 0)
 		return (-1);
-	if (comp != NULL)
+	if (cmp != NULL || array != NULL)
 	{
 		for (i = 0; i < size; i++)
 		{
-			if (comp(array[i]) != 0)
+			if (cmp(array[i]) == 0)
 			{
 				return (i);
 			}
