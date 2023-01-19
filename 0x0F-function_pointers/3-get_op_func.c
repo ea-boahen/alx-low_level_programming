@@ -18,24 +18,17 @@ int (*get_op_func(char *s))(int, int)
 	{ "%", op_mod },
 	{ NULL, NULL }
 	};
-	int i = 0, j = 0, k = 0;
+	int i = 0;
 
-	for (; j < 6; j++)
-	{
-		if (strcmp(s, ops[i].op) != 0)
-			k++;
-	}
-	if (k == 0)
-	{
-		printf("Error\n");
-		exit(99);
-	}
 	while (i < 5)
 	{
 		if (strcmp(s, ops[i].op) == 0)
 			return (ops[i].f);	
 		i++;
 	}
+
+	printf("Error\n");
+	exit(99);
 
 	return (0);
 }
