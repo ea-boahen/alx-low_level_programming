@@ -47,7 +47,7 @@ void print_all(const char *format, ...)
 				i = 1;
 				break;
 			default:
-				/* ignore other characters in format string*/
+				/*ignore other characters in format string*/
 				break;
 			}
 
@@ -56,5 +56,5 @@ void print_all(const char *format, ...)
 		count++;
 	}
 	va_end(args);
-	putchar('\n');
+	printf("\n");
 }
