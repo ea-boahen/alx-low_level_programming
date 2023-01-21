@@ -9,7 +9,8 @@
  *
  * Return: void (SUCCESS)
  */
-void print_all(const char* format, ...) {
+void print_all(const char *format, ...)
+{
 	va_list args;
 	char *str;
 	int count = 0;
@@ -17,9 +18,12 @@ void print_all(const char* format, ...) {
 
 	va_start(args, format);
 
-	while (*format && count < 9) {
+	while (*format && count < 9)
+	{
 		int i = 0;
-		switch (*format++) {
+
+		switch (*format++)
+		{
 			case 'i':
 				printf("%d", va_arg(args, int));
 				i = 1;
@@ -27,18 +31,19 @@ void print_all(const char* format, ...) {
 			case 'f':
 				printf("%f", va_arg(args, double));
 				i = 1;
-				break;	
+				break;
 			case 'c':
 				printf("%c", va_arg(args, int));
 				i = 1;
-				break;	
+				break;
 			case 's':
 				str  = va_arg(args, char*);
-				if (str == NULL || str[0] == '\0') {
+				if (str == NULL || str[0] == '\0')
+				{
 					printf("nill");
-				} else {
-					printf("%s", str);
 				}
+				else
+					printf("%s", str);
 				i = 1;
 				break;
 			default:
