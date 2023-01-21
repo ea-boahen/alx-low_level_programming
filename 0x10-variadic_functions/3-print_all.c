@@ -1,61 +1,51 @@
-#include "variadic_functions.h"
-#include <string.h>
-#include <stdarg.h>
 #include <stdio.h>
+#include <stdarg.h>
+#include "variadic_functions.h"
 
 /**
- * print_strings - prints strings.
- * @format: string specifying format of printout
- *
- * Return: void (SUCCESS)
- */
-void print_all(const char *format, ...)
+* print_all - print char, integer, float and string
+* @format: format
+*/
+void print_all(const char * const format, ...)
 {
-	va_list args;
-	char *str;
-	int count = 0;
-	int flen = strlen(format);
+	va_list list;
+	unsigned int j = 0, start = 0;
+	char *p;
 
-	va_start(args, format);
-
-	while (*format && count < 9)
+	va_start(list, format);
+	while (format && format[j] != '\0')
 	{
-		int i = 0;
-
-		switch (*format++)
-		{
+		switch (format[j])
+		{ case 'c':
+			switch (start)
+			{ case 1: printf(", "); }
+			start = 1;
+			printf("%c", va_arg(list, int));
+			break;
 			case 'i':
-				printf("%d", va_arg(args, int));
-				i = 1;
-				break;
-			case 'f':
-				printf("%f", va_arg(args, double));
-				i = 1;
-				break;
-			case 'c':
-				printf("%c", va_arg(args, int));
-				i = 1;
-				break;
-			case 's':
-				str = va_arg(args, char*);
-
-				if (str == NULL || str[0] == '\0')
-				{
-					printf("nill");
-				}
-				else
-					printf("%s", str);
-				i = 1;
-				break;
-			default:
-				/*ignore other characters in format string*/
-				break;
-			}
-
-		if (count < flen - 1 && i != 0)
-			printf(", ");
-		count++;
+			switch (start)
+			{ case 1: printf(", "); }
+			start = 1;
+			printf("%i", va_arg(list, int));
+			break;
+		case 'f':
+			switch (start)
+			{ case 1: printf(", "); }
+			start = 1;
+			printf("%f", va_arg(list, double));
+			break;
+		case's':
+			switch (start)
+			{ case 1: printf(", "); }
+			start = 1;
+			p = va_arg(list, char*);
+			if (p)
+			{ printf("%s", p);
+			break; }
+			printf("%p", p);
+			break; }
+		j++;
 	}
-	va_end(args);
-	putchar('\n');
+	printf("\n");
+	va_end(list);
 }
