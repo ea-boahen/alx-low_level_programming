@@ -57,5 +57,5 @@ void print_all(const char *format, ...)
 		count++;
 	}
 	va_end(args);
-	printf("\n");
+	putchar("\n");
 }
