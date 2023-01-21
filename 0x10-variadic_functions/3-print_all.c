@@ -37,7 +37,8 @@ void print_all(const char *format, ...)
 				i = 1;
 				break;
 			case 's':
-				str  = va_arg(args, char*);
+				str = va_arg(args, char*);
+
 				if (str == NULL || str[0] == '\0')
 				{
 					printf("nill");
