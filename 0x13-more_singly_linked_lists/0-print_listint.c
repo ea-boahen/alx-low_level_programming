@@ -11,14 +11,14 @@
 size_t print_listint(const listint_t *h)
 {
 	unsigned int snode = 0;
-	const listint_t *temp;
+	const listint_t *tp;
 
-	temp = h;
-	while (temp)
+	tp = h;
+	while (tp)
 	{
-		printf("%d\n", temp->n);
+		printf("%d\n", tp->n);
 		snode++;
-		temp = temp->next;
+		tp = tp->next;
 	}
 
 	return (snode);
