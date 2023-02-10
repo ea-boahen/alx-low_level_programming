@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdarg.h>
 
 /**
  * main - main function
@@ -20,13 +21,13 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	fd_r = open (argv[1], 0_RDONLY);
+	fd_r = open (argv[1], O_RDONLY);
 	if (fd_r < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	fd_w = open(argv[2], 0_CREAT | 0_WRONLY | 0_TRUNC, 0664);
+	fd_w = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	while ((x = read(fd_r, buf, BUFSIZ)) > 0)
 	{
 		if (fd_w < 0 || write(fd_w, buf, x) != x)
@@ -38,7 +39,7 @@ int main(int argc, char *argv[])
 	}
 	if (x < 0)
 	{
-		dprint(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	m = close(fd_r);
@@ -48,7 +49,7 @@ int main(int argc, char *argv[])
 		if (m < 0)
 			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_r);
 		if (n < 0)
-			dprint(STDERR_FILENO, "Error: Can't close fd %d\n", fd_w);
+			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_w);
 		exit(100);
 	}
 	return (0);

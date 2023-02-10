@@ -24,25 +24,25 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	if (filename == NULL)
 		return (0);
-	fd = fopen(filename, 0_RDONLY);
-	if (fp < 0)
+	fd = open(filename, O_RDONLY);
+	if (fd < 0)
 		return (0);
 
 	/*process file getc, putc, getw, putw, fprintf, fscanf etc*/
-	i = read(fd, buf, letters);
+	i = read(fd, ch, letters);
 	if (i < 0)
 	{
-		free(buf);
+		free(ch);
 		return (0);
 	}
-	buf[i] = '\0';
+	ch[i] = '\0';
 	close(fd);
-	y = write(STDOUT_FILENO, buf, i);
+	y = write(STDOUT_FILENO, ch, i);
 	if (y < 0)
 	{
-		free(buf);
+		free(ch);
 		return (0);
 	}
-	free(buf);
+	free(ch);
 	return (y);
 }
