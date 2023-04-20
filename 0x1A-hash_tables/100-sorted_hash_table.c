@@ -87,7 +87,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	new->next = ht->array[index];
 	ht->array[index] = new;
 
-if (ht->shead == NULL)
+	if (ht->shead == NULL)
 	{
 		new->sprev = NULL;
 		new->snext = NULL;
@@ -148,7 +148,7 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 
 /**
  * shash_table_print - Prints a sorted hash table in order.
- * @ht: A pointer to the sorted hash table.
+ * @ht: A pointer to the sorted hash tables.
  */
 void shash_table_print(const shash_table_t *ht)
 {
@@ -171,7 +171,7 @@ void shash_table_print(const shash_table_t *ht)
 
 /**
  * shash_table_print_rev - Prints a sorted hash table in reverse order.
- * @ht: A pointer to the sorted hash table to print.
+ * @ht: A pointer to the sorted hash table to prints.
  */
 void shash_table_print_rev(const shash_table_t *ht)
 {
@@ -194,7 +194,7 @@ void shash_table_print_rev(const shash_table_t *ht)
 
 /**
  * shash_table_delete - Deletes a sorted hash table.
- * @ht: A pointer to the sorted hash table.
+ * @ht: A pointer to the sorted hash tables.
  */
 void shash_table_delete(shash_table_t *ht)
 {
@@ -216,4 +216,4 @@ void shash_table_delete(shash_table_t *ht)
 
 	free(head->array);
 	free(head);
-}	
+}
